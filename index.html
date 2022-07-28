@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/4e1f2043ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Splash&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather application</title>
+  </head>
+  <body>
+    <div class="container">
+      <form   id="search-form">
+      <div class="row">
+        <div class="col-4">
+          <h1>
+            <i class="fa-solid fa-sun"></i>
+            25°C
+          </h1>
+          <h2 id="city1">Kyiv</h2>
+          <h4 id="currentDate">0000</h4>
+        </div>
+       
+          <div class="col-1">
+            <label for="city" class="visually-hidden">City</label>
+            <input
+              type="text"
+              readonly
+              class="form-control-plaintext"
+              id="staticCity"
+              value="City"
+            />
+          </div>
+          <div class="col-4">
+            <label for="inputPassword2" class="visually-hidden">City</label>
+            <input
+              type="text"
+              class="form-control"
+              id="city"
+              placeholder="Tape your city..."
+            />
+          </div>
+          <div class="col-1">
+            <button type="submit" class="btn btn-primary mb-3">Search</button>
+          </div>
+        </form>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="fa-solid fa-cloud-sun-rain"></i>
+              17°C
+            </h5>
+
+            <p class="card-text">Mon 04</p>
+            <p class="card-text">
+              <small class="text-muted">Jul</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="fa-solid fa-smog"></i>
+              23°C
+            </h5>
+            <p class="card-text">Tue 05</p>
+            <p class="card-text">
+              <small class="text-muted">Jul</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="fa-solid fa-cloud"></i>
+              19°C
+            </h5>
+            <p class="card-text">Wed 06</p>
+            <p class="card-text">
+              <small class="text-muted">Jul</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="fa-solid fa-cloud-sun"></i>
+              21°C
+            </h5>
+            <p class="card-text">Thu 06</p>
+            <p class="card-text">
+              <small class="text-muted">Jul</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="fa-solid fa-cloud-rain"></i>
+              15°C
+            </h5>
+            <p class="card-text">Fri 07</p>
+            <p class="card-text">
+              <small class="text-muted">Jul</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="fa-solid fa-cloud-sun"></i>
+              20°C
+            </h5>
+            <p class="card-text">Sat 08</p>
+            <p class="card-text">
+              <small class="text-muted">Jul</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
