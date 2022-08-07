@@ -39,6 +39,21 @@ function searchWeather(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchWeather);
 
+function formatDate(timestamp) {
+  let date1 = new Date(timestamp);
+  let hours1 = date1.getHours();
+  let minutes1 = date1.getMinutes();
+  if (minutes1 < 10) {
+    minutes1 = `0${minutes1}`;
+  }
+  if (hours1 < 10) {
+    hours1 = `0${hours1}`;
+  }
+  let days1 = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day1 = days1[date1.getDay()];
+  return `${day1} ${hours1}:${minutes1}`;
+}
+
 function showTempr(response) {
   document.querySelector("#city1").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -47,9 +62,11 @@ function showTempr(response) {
   let conditionElement = document.querySelector("#condition");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
   conditionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function city(event) {
