@@ -18,3 +18,44 @@ body {
 .card-text {
   text-align: center;
 }
+.weather-app-wrapper {
+  max-width: 800px;
+  margin: 30px auto;
+}
+.weather-app {
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.description {
+  padding: 25px;
+}
+.overview {
+  margin-bottom: 20px;
+}
+.weather-temperature i {
+  color: green;
+  margin-right: 5px;
+  height: 50px;
+  width: 50px;
+}
+.weather-temperature strong {
+  color: green;
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 400;
+}
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -32px;
+}

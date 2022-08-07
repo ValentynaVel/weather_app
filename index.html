@@ -31,19 +31,31 @@
     <title>Weather app</title>
   </head>
   <body>
-    <div class="container">
-      <form   id="search-form">
+    <div class="container"> 
+    <div class="weather-app-wrapper">
+    <div class="weather-app">
+      <form id="search-form">
       <div class="row">
         <div class="col-4">
-          <h1>
-            <i class="fa-solid fa-sun"></i>
-            25 °C|°F
-          </h1>
+          <div class="overview">
           <h2 id="city1">Kyiv</h2>
-          <h4 id="currentDate">0000</h4>
+          <ul>
+            <li id="currentDate"></li>
+          <li>
+            Clear
+          </li>
+          </ul>
+         </div>
+         <h2>
+          <div class="clearfix weather-temperature">
+            <i class="fa-solid fa-sun"></i>
+           <strong>25</strong>
+           <span class="units">°C|<a href="#">°F</a>
+           </span>
+          </div>
+          </h2>
         </div>
-       
-          <div class="col-1">
+           <div class="col-1">
             <label for="city" class="visually-hidden">City</label>
             <input
               type="text"
@@ -61,9 +73,17 @@
               id="city"
               placeholder="Tape your city..."
             />
+            <div class="description">
+            <ul>
+                <li>Влажность</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> m/h</li>
+            </ul> 
+            </div> 
           </div>
           <div class="col-1">
             <button type="submit" class="btn btn-primary mb-3">Search</button>
+             
           </div>
         </form>
       </div>
@@ -142,8 +162,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <small>
+      </div>
+        <small>
           <a href="https://github.com/ValentynaVel/weather_app" target="_blank"
             >Open-source code on GitHub</a
           >
@@ -153,6 +173,9 @@
           >
           by Valentina Velichenko
           </small>
-    <script src="src/script.js"></script>
+    </div> 
+      </div>
+      
+        <script src="src/script.js"></script>
   </body>
 </html>

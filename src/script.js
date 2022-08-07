@@ -41,7 +41,9 @@ form.addEventListener("submit", searchWeather);
 
 function showTempr(response) {
   document.querySelector("#city1").innerHTML = response.data.name;
-  document.querySelector("h1").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("strong").innerHTML = Math.round(
+    response.data.main.temp
+  );
 }
 
 function city(event) {
