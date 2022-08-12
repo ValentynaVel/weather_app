@@ -32,18 +32,16 @@
   </head>
   <body>
     <div class="container"> 
-    <div class="weather-app-wrapper">
-    <div class="weather-app">
-      <form id="search-form">
-      <div class="row">
-        <div class="col-4">
+     <div class="weather-app-wrapper">
+      <div class="weather-app">
+       <form id="search-form">
+        <div class="row">
+         <div class="col-4">
           <div class="overview">
-          <h2 id="city1">Kyiv</h2>
+          <h2 id="city">Kyiv</h2>
           <ul>
-            <li>Now: <span id="currentDate"></span></li> 
-            <li>Last updated: <span id="date"></span></li>
-            <li id="date"></li>
-            <li id="condition"></li>
+            <li>Last updated at: <span id="date"></span></li>
+            <li id="description"></li>
           </ul>
          </div>
          <h2>
@@ -56,23 +54,15 @@
           </div>
           </h2>
         </div>
-           <div class="col-1">
-            <label for="city" class="visually-hidden">City</label>
-            <input
-              type="text"
-              readonly
-              class="form-control-plaintext"
-              id="staticCity"
-              value="City"
-            />
-          </div>
+      
           <div class="col-4">
             <label for="inputPassword2" class="visually-hidden">City</label>
             <input
-              type="text"
+              type="search"
               class="form-control"
-              id="city"
+              id="city-input"
               placeholder="Tape your city..."
+              autocomplete="off"
             />
             <div class="description">
             <ul>
@@ -81,120 +71,16 @@
             </ul> 
             </div> 
           </div>
-          <div class="col-1">
-            <button type="submit" class="btn btn-primary mb-3">Search</button>
-             
-          </div>
-        </form>
-      </div>
-      <div class="weather-forecast">
-        <div class="row">
           <div class="col-2">
-            <div class="weather-forecast-date">Mon</div>
-            <i class="fa-solid fa-cloud-sun-rain"></i>
-            <div class="weather-forecast-temperature">
-            <span class="weather-forecast-temperature-max">18°C</span>
-            <span class="weather-forecast-temperature-min">17°C</span>
-          </div>
-        </div>
-        
-        <div class="col-2">
-            <div class="weather-forecast-date">Mon
-          </div>
-            <i class="fa-solid fa-cloud-sun-rain"></i>
-            <div class="weather-forecast-temperature">
-            <span class="weather-forecast-temperature-max">18°C</span>
-            <span class="weather-forecast-temperature-min">17°C</span>
-          </div>
-        </div>
-        <div class="col-2">
-            <div class="weather-forecast-date">Mon
-          </div>
-            <i class="fa-solid fa-cloud-sun-rain"></i>
-            <div class="weather-forecast-temperature">
-            <span class="weather-forecast-temperature-max">18°C</span>
-            <span class="weather-forecast-temperature-min">17°C</span>
-          </div>
-        </div>
-        <div class="col-2">
-            <div class="weather-forecast-date">Mon
-          </div>
-            <i class="fa-solid fa-cloud-sun-rain"></i>
-            <div class="weather-forecast-temperature">
-            <span class="weather-forecast-temperature-max">18°C</span>
-            <span class="weather-forecast-temperature-min">17°C</span>
-          </div>
-        </div>
-        <div class="col-2">
-            <div class="weather-forecast-date">Mon
-          </div>
-            <i class="fa-solid fa-cloud-sun-rain"></i>
-            <div class="weather-forecast-temperature">
-            <span class="weather-forecast-temperature-max">18°C</span>
-            <span class="weather-forecast-temperature-min">17°C</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">
-              <i class="fa-solid fa-smog"></i>
-              23°C
-            </h5>
-            <p class="card-text">Tue 05</p>
-            <p class="card-text">
-              <small class="text-muted">Jul</small>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">
-              <i class="fa-solid fa-cloud"></i>
-              19°C
-            </h5>
-            <p class="card-text">Wed 06</p>
-            <p class="card-text">
-              <small class="text-muted">Jul</small>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">
-              <i class="fa-solid fa-cloud-sun"></i>
-              21°C
-            </h5>
-            <p class="card-text">Thu 06</p>
-            <p class="card-text">
-              <small class="text-muted">Jul</small>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">
-              <i class="fa-solid fa-cloud-rain"></i>
-              15°C
-            </h5>
-            <p class="card-text">Fri 07</p>
-            <p class="card-text">
-              <small class="text-muted">Jul</small>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">
-              <i class="fa-solid fa-cloud-sun"></i>
-              20°C
-            </h5>
-            <p class="card-text">Sat 08</p>
-            <p class="card-text">
-              <small class="text-muted">Jul</small>
-            </p>
-          </div>
-        </div>
-        </div>
+            <input type="submit" value="Search" class="btn btn-primary w-100">
+            </div>
+        </form>
+
+      </div>
+      
+      <div class="weather-forecast" id="forecast">
+      </div>
+
       </div>
         <small>
           <a href="https://github.com/ValentynaVel/weather_app" target="_blank"
@@ -206,9 +92,8 @@
           >
           by Valentina Velichenko
           </small>
+
     </div> 
-      </div>
-      
-        <script src="src/script.js"></script>
+      <script src="src/script.js"></script>
   </body>
 </html>
