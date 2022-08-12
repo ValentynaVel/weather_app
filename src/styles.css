@@ -23,6 +23,7 @@ body {
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 10px;
+  background-color: white;
 }
 li {
   list-style: none;
@@ -36,6 +37,7 @@ ul {
 li:first-letter {
   text-transform: capitalize;
 }
+
 .description {
   padding: 25px;
 }
